@@ -1,15 +1,15 @@
 const CACHE_NAME = 'arbitrpro-v1';
 const urlsToCache = [
-    '/',
-    '/index.html',
-    '/dashboard.html',
-    '/blocked-hard.html',
-    '/blocked-soft.html',
-    '/topup.html',
-    '/closed.html',
-    '/styles.css',
-    '/app.js',
-    '/manifest.json'
+    './',
+    './index.html',
+    './dashboard.html',
+    './blocked-hard.html',
+    './blocked-soft.html',
+    './topup.html',
+    './closed.html',
+    './styles.css',
+    './app.js',
+    './manifest.json'
 ];
 
 self.addEventListener('install', (event) => {
