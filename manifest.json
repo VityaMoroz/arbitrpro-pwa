@@ -2,11 +2,12 @@
     "name": "АрбитрПро — Личный кабинет должника",
     "short_name": "АрбитрПро",
     "description": "Отслеживание статуса выплаты ПМ и дела о банкротстве",
-    "start_url": "/index.html",
+    "start_url": "./index.html",
+    "scope": "./",
     "display": "standalone",
     "orientation": "portrait",
-    "background_color": "#FAF6ED",
-    "theme_color": "#1B8A4A",
+    "background_color": "#F7EBDD",
+    "theme_color": "#19322E",
     "lang": "ru",
     "icons": [
         {
