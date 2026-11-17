@@ -1,44 +1,38 @@
-/* ============================
-   АРБИТРПРО — ФИРМЕННЫЕ ЦВЕТА
-   ============================ */
 :root {
-    --green: #1B8A4A;
-    --green-dark: #146B39;
-    --green-light: #E8F5EC;
     --white: #FFFFFF;
-    --beige: #FAF6ED;
-    --beige-dark: #F0E8D6;
-    --gold: #C9A961;
-    --gold-dark: #A8893F;
-    --text: #2C2C2C;
-    --text-muted: #6B6B6B;
+    --green: #19322E;
+    --green-dark: #0F1F1C;
+    --sand: #BEAC8C;
+    --sand-light: #D4C4A8;
+    --cream: #F7EBDD;
+    --cream-dark: #EDE0CC;
+    --gray: #585B5C;
+    --dark: #3A3737;
     --border: #E5DCC5;
-    --error: #C0392B;
-    --shadow: 0 2px 12px rgba(27, 138, 74, 0.08);
+    --error: #A04030;
+    --shadow: 0 2px 16px rgba(25, 50, 46, 0.08);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 html, body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: var(--beige);
-    color: var(--text);
+    background: var(--cream);
+    color: var(--dark);
     font-size: 16px;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     min-height: 100vh;
 }
 
-/* ============================
-   ЭКРАН ВХОДА
-   ============================ */
+/* ===== ЭКРАН ВХОДА ===== */
 .auth-page {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     padding: 20px;
-    background: linear-gradient(180deg, var(--beige) 0%, var(--beige-dark) 100%);
+    background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
 }
 
 .auth-container {
@@ -46,49 +40,52 @@ html, body {
     max-width: 400px;
     background: var(--white);
     border-radius: 20px;
-    padding: 32px 24px;
+    padding: 36px 28px;
     box-shadow: var(--shadow);
     border: 1px solid var(--border);
 }
 
-.logo-block { text-align: center; margin-bottom: 28px; }
+.logo-block { text-align: center; margin-bottom: 32px; }
 
 .logo-icon {
-    width: 64px; height: 64px;
-    margin: 0 auto 12px;
-    background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
-    color: var(--gold);
+    width: 68px; height: 68px;
+    margin: 0 auto 14px;
+    background: var(--green);
+    color: var(--sand);
     font-size: 32px;
     font-weight: 700;
     border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 16px rgba(27, 138, 74, 0.3);
-    border: 2px solid var(--gold);
+    box-shadow: 0 6px 20px rgba(25, 50, 46, 0.25);
+    border: 2px solid var(--sand);
+    letter-spacing: -1px;
 }
 
 .logo-title {
     font-size: 22px;
     font-weight: 700;
-    color: var(--green-dark);
-    letter-spacing: 1px;
+    color: var(--green);
+    letter-spacing: 2px;
 }
 
 .logo-subtitle {
     font-size: 13px;
-    color: var(--text-muted);
+    color: var(--gray);
     margin-top: 4px;
 }
 
-.auth-form { display: flex; flex-direction: column; gap: 16px; }
+.auth-form { display: flex; flex-direction: column; gap: 18px; }
 
 .form-group { display: flex; flex-direction: column; gap: 6px; }
 
 .form-group label {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
-    color: var(--text);
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .form-group input,
@@ -99,7 +96,7 @@ html, body {
     border: 1.5px solid var(--border);
     border-radius: 12px;
     background: var(--white);
-    color: var(--text);
+    color: var(--dark);
     transition: border-color 0.2s, box-shadow 0.2s;
     font-family: inherit;
 }
@@ -108,39 +105,40 @@ html, body {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--green);
-    box-shadow: 0 0 0 3px rgba(27, 138, 74, 0.12);
+    box-shadow: 0 0 0 3px rgba(25, 50, 46, 0.1);
 }
 
 .field-hint {
     font-size: 11px;
-    color: var(--text-muted);
+    color: var(--gray);
 }
 
 .btn-primary {
     width: 100%;
     padding: 16px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     color: var(--white);
-    background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+    background: var(--green);
     border: none;
     border-radius: 12px;
     cursor: pointer;
-    transition: transform 0.1s, box-shadow 0.2s;
-    box-shadow: 0 4px 12px rgba(27, 138, 74, 0.25);
+    transition: transform 0.1s, background 0.2s;
+    box-shadow: 0 4px 14px rgba(25, 50, 46, 0.3);
+    letter-spacing: 0.5px;
 }
 
-.btn-primary:active { transform: scale(0.98); }
+.btn-primary:active { transform: scale(0.98); background: var(--green-dark); }
 
-.btn-large { padding: 18px; font-size: 17px; }
+.btn-large { padding: 18px; font-size: 16px; }
 
 .btn-secondary {
     width: 100%;
     padding: 14px;
     font-size: 14px;
     font-weight: 600;
-    color: var(--green-dark);
-    background: var(--green-light);
+    color: var(--green);
+    background: rgba(25, 50, 46, 0.06);
     border: 1.5px solid var(--green);
     border-radius: 12px;
     cursor: pointer;
@@ -154,7 +152,7 @@ html, body {
 .btn-icon {
     width: 22px; height: 22px;
     background: var(--green);
-    color: var(--white);
+    color: var(--sand);
     border-radius: 50%;
     display: inline-flex;
     align-items: center;
@@ -170,12 +168,13 @@ html, body {
     border-radius: 10px;
     font-size: 14px;
     text-align: center;
+    border: 1px solid rgba(160, 64, 48, 0.2);
 }
 
 .auth-help {
     display: block;
     text-align: center;
-    color: var(--text-muted);
+    color: var(--gray);
     font-size: 13px;
     text-decoration: none;
     padding: 8px;
@@ -186,51 +185,49 @@ html, body {
 .auth-footer {
     text-align: center;
     font-size: 11px;
-    color: var(--text-muted);
+    color: var(--gray);
     margin-top: 24px;
 }
 
-/* ============================
-   DASHBOARD
-   ============================ */
+/* ===== DASHBOARD ===== */
 .top-bar {
-    background: var(--white);
-    padding: 12px 16px;
+    background: var(--green);
+    padding: 14px 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
     z-index: 10;
+    box-shadow: 0 2px 10px rgba(25, 50, 46, 0.15);
 }
 
 .user-info { display: flex; align-items: center; gap: 10px; }
 
 .user-avatar {
     width: 38px; height: 38px;
-    background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
-    color: var(--gold);
+    background: var(--sand);
+    color: var(--green);
     font-weight: 700;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 13px;
-    border: 1.5px solid var(--gold);
+    border: 1.5px solid var(--white);
 }
 
 .user-name {
     font-size: 14px;
     font-weight: 600;
-    color: var(--text);
+    color: var(--white);
 }
 
 .btn-logout {
     background: none;
     border: none;
     font-size: 22px;
-    color: var(--text-muted);
+    color: var(--sand);
     cursor: pointer;
     padding: 6px 10px;
 }
@@ -246,47 +243,54 @@ html, body {
 .card {
     background: var(--white);
     border-radius: 16px;
-    padding: 18px;
+    padding: 20px;
     box-shadow: var(--shadow);
     border: 1px solid var(--border);
 }
 
 .card-title {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
-    color: var(--green-dark);
-    margin-bottom: 14px;
-    padding-bottom: 10px;
+    color: var(--green);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
     border-bottom: 1px solid var(--border);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 /* Финансы */
 .finance-card {
-    background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+    background: var(--green);
     color: var(--white);
     border: none;
 }
 
 .card-label {
-    font-size: 12px;
-    opacity: 0.85;
+    font-size: 11px;
+    opacity: 0.75;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;
+    color: var(--sand);
 }
 
 .finance-amount {
-    font-size: 36px;
+    font-size: 38px;
     font-weight: 800;
-    margin: 8px 0 4px;
-    color: var(--gold);
-    text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    margin: 10px 0 6px;
+    color: var(--sand);
+    letter-spacing: -1px;
 }
 
 .finance-card .btn-secondary {
-    background: rgba(255,255,255,0.15);
+    background: rgba(255, 255, 255, 0.08);
     color: var(--white);
-    border-color: var(--gold);
-    backdrop-filter: blur(4px);
+    border-color: var(--sand);
+}
+
+.finance-card .btn-icon {
+    background: var(--sand);
+    color: var(--green);
 }
 
 /* Степпер ПМ */
@@ -311,8 +315,8 @@ html, body {
 .step-dot {
     width: 36px; height: 36px;
     border-radius: 50%;
-    background: var(--beige-dark);
-    color: var(--text-muted);
+    background: var(--cream);
+    color: var(--gray);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -325,27 +329,27 @@ html, body {
 
 .step.active .step-dot {
     background: var(--green);
-    color: var(--gold);
+    color: var(--sand);
     border-color: var(--green);
-    box-shadow: 0 0 0 4px rgba(27, 138, 74, 0.15);
+    box-shadow: 0 0 0 4px rgba(25, 50, 46, 0.15);
 }
 
 .step.done .step-dot {
-    background: var(--gold);
+    background: var(--sand);
     color: var(--white);
-    border-color: var(--gold);
+    border-color: var(--sand);
 }
 
 .step-label {
     font-size: 12px;
     font-weight: 600;
-    color: var(--text);
+    color: var(--dark);
     margin-bottom: 2px;
 }
 
 .step-date {
     font-size: 11px;
-    color: var(--text-muted);
+    color: var(--gray);
 }
 
 .step-line {
@@ -357,13 +361,13 @@ html, body {
 }
 
 .status-message {
-    margin-top: 14px;
-    padding: 12px;
-    background: var(--green-light);
+    margin-top: 16px;
+    padding: 12px 14px;
+    background: var(--cream);
     border-left: 3px solid var(--green);
     border-radius: 8px;
     font-size: 13px;
-    color: var(--green-dark);
+    color: var(--dark);
 }
 
 /* Timeline */
@@ -387,14 +391,13 @@ html, body {
     background: var(--border);
 }
 
-.timeline-item.done:not(:last-child)::after { background: var(--gold); }
-.timeline-item.active:not(:last-child)::after { background: var(--border); }
+.timeline-item.done:not(:last-child)::after { background: var(--sand); }
 
 .timeline-dot {
     width: 24px; height: 24px;
     border-radius: 50%;
-    background: var(--beige-dark);
-    color: var(--text-muted);
+    background: var(--cream);
+    color: var(--gray);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -405,35 +408,35 @@ html, body {
 }
 
 .timeline-item.done .timeline-dot {
-    background: var(--gold);
+    background: var(--sand);
     color: var(--white);
-    border-color: var(--gold);
+    border-color: var(--sand);
 }
 
 .timeline-item.active .timeline-dot {
     background: var(--green);
-    color: var(--gold);
+    color: var(--sand);
     border-color: var(--green);
-    box-shadow: 0 0 0 4px rgba(27, 138, 74, 0.15);
+    box-shadow: 0 0 0 4px rgba(25, 50, 46, 0.15);
 }
 
 .timeline-text {
     font-size: 14px;
-    color: var(--text);
+    color: var(--dark);
     padding-top: 2px;
 }
 
-.timeline-item.done .timeline-text { color: var(--text-muted); }
-.timeline-item.active .timeline-text { font-weight: 600; color: var(--green-dark); }
+.timeline-item.done .timeline-text { color: var(--gray); }
+.timeline-item.active .timeline-text { font-weight: 600; color: var(--green); }
 
 /* FAB */
 .fab-contact {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+    background: var(--green);
     color: var(--white);
-    border: 2px solid var(--gold);
+    border: 2px solid var(--sand);
     border-radius: 50px;
     padding: 12px 20px;
     display: flex;
@@ -442,7 +445,7 @@ html, body {
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    box-shadow: 0 6px 20px rgba(27, 138, 74, 0.35);
+    box-shadow: 0 6px 20px rgba(25, 50, 46, 0.35);
     z-index: 20;
 }
 
@@ -450,8 +453,8 @@ html, body {
 
 /* Демо-панель */
 .demo-panel {
-    background: var(--beige-dark);
-    border: 1px dashed var(--gold);
+    background: var(--cream);
+    border: 1px dashed var(--sand);
 }
 
 .demo-buttons {
@@ -467,17 +470,15 @@ html, body {
     border: 1px solid var(--border);
     border-radius: 8px;
     cursor: pointer;
-    color: var(--text);
+    color: var(--dark);
 }
 
-.btn-demo:active { background: var(--green-light); }
+.btn-demo:active { background: var(--cream-dark); }
 
-/* ============================
-   БЛОКИРОВКИ
-   ============================ */
+/* ===== БЛОКИРОВКИ ===== */
 .blocked-page, .closed-page {
     min-height: 100vh;
-    background: var(--beige);
+    background: var(--cream);
 }
 
 .blocked-content, .closed-content {
@@ -491,35 +492,35 @@ html, body {
 
 .blocked-icon {
     width: 80px; height: 80px;
-    background: var(--gold);
+    background: var(--sand);
     color: var(--white);
     font-size: 40px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 6px 20px rgba(201, 169, 97, 0.3);
+    box-shadow: 0 6px 20px rgba(190, 172, 140, 0.4);
 }
 
 .blocked-title, .success-title {
     font-size: 22px;
-    color: var(--green-dark);
+    color: var(--green);
     font-weight: 700;
 }
 
 .blocked-text {
     font-size: 15px;
-    color: var(--text);
+    color: var(--dark);
     max-width: 320px;
 }
 
 .blocked-subtext {
     font-size: 13px;
-    color: var(--text-muted);
+    color: var(--gray);
 }
 
 .blocked-help {
-    color: var(--text-muted);
+    color: var(--gray);
     font-size: 13px;
     text-decoration: none;
     margin-top: 12px;
@@ -527,18 +528,17 @@ html, body {
 
 /* Soft alert */
 .soft-alert {
-    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+    background: var(--sand);
     color: var(--white);
     padding: 16px;
     display: flex;
     gap: 12px;
     align-items: flex-start;
-    border-bottom: 1px solid var(--gold-dark);
 }
 
 .soft-alert-icon {
     width: 32px; height: 32px;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -563,7 +563,7 @@ html, body {
 
 .btn-alert {
     background: var(--white);
-    color: var(--green-dark);
+    color: var(--green);
     border: none;
     padding: 8px 16px;
     border-radius: 8px;
@@ -572,15 +572,13 @@ html, body {
     cursor: pointer;
 }
 
-/* ============================
-   ФОРМЫ
-   ============================ */
-.form-page { background: var(--beige); min-height: 100vh; }
+/* ===== ФОРМЫ ===== */
+.form-page { background: var(--cream); min-height: 100vh; }
 
 .btn-back {
     background: none;
     border: none;
-    color: var(--green-dark);
+    color: var(--green);
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
@@ -590,7 +588,7 @@ html, body {
 .top-bar-title {
     font-size: 15px;
     font-weight: 700;
-    color: var(--green-dark);
+    color: var(--green);
 }
 
 .form-card {
@@ -606,21 +604,21 @@ html, body {
 
 .form-title {
     font-size: 18px;
-    color: var(--green-dark);
+    color: var(--green);
     font-weight: 700;
 }
 
 .form-subtitle {
     font-size: 13px;
-    color: var(--text-muted);
+    color: var(--gray);
 }
 
 .file-upload { display: flex; flex-direction: column; gap: 8px; }
 
 .btn-file {
     padding: 14px;
-    background: var(--green-light);
-    color: var(--green-dark);
+    background: var(--cream);
+    color: var(--green);
     border: 1.5px dashed var(--green);
     border-radius: 12px;
     font-size: 14px;
@@ -642,26 +640,24 @@ html, body {
     border: 1px solid var(--border);
 }
 
-/* ============================
-   ЗАВЕРШЕННОЕ ДЕЛО
-   ============================ */
+/* ===== ЗАВЕРШЕННОЕ ДЕЛО ===== */
 .success-icon {
     width: 80px; height: 80px;
-    background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
-    color: var(--gold);
+    background: var(--green);
+    color: var(--sand);
     font-size: 48px;
     font-weight: 700;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 6px 20px rgba(27, 138, 74, 0.3);
-    border: 3px solid var(--gold);
+    box-shadow: 0 6px 20px rgba(25, 50, 46, 0.3);
+    border: 3px solid var(--sand);
 }
 
 .success-text {
     font-size: 14px;
-    color: var(--text);
+    color: var(--dark);
     max-width: 320px;
 }
 
@@ -678,8 +674,8 @@ html, body {
 }
 
 .info-label {
-    font-size: 12px;
-    color: var(--text-muted);
+    font-size: 11px;
+    color: var(--gray);
     text-transform: uppercase;
     letter-spacing: 0.3px;
 }
@@ -687,13 +683,13 @@ html, body {
 .info-value {
     font-size: 14px;
     font-weight: 700;
-    color: var(--green-dark);
+    color: var(--green);
 }
 
 .notice-card {
     width: 100%;
     max-width: 320px;
-    background: var(--green-light);
+    background: var(--cream);
     border-left: 3px solid var(--green);
     border-radius: 10px;
     padding: 14px;
@@ -706,12 +702,10 @@ html, body {
 
 .notice-text {
     font-size: 13px;
-    color: var(--green-dark);
+    color: var(--dark);
 }
 
-/* ============================
-   АДАПТИВ
-   ============================ */
+/* ===== АДАПТИВ ===== */
 @media (min-width: 600px) {
     .content { max-width: 600px; margin: 0 auto; }
     .stepper { padding: 12px 0; }
