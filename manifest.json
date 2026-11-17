@@ -1,7 +1,7 @@
 {
-    "name": "АрбитрПро — Личный кабинет должника",
+    "name": "АрбитрПро",
     "short_name": "АрбитрПро",
-    "description": "Отслеживание статуса выплаты ПМ и дела о банкротстве",
+    "description": "Личный кабинет должника",
     "start_url": "./index.html",
     "scope": "./",
     "display": "standalone",
@@ -11,14 +11,14 @@
     "lang": "ru",
     "icons": [
         {
-            "src": "icon-192.png",
-            "sizes": "192x192",
+            "src": "./icon-512.png",
+            "sizes": "512x512",
             "type": "image/png",
             "purpose": "any maskable"
         },
         {
-            "src": "icon-512.png",
-            "sizes": "512x512",
+            "src": "./icon-512.png",
+            "sizes": "192x192",
             "type": "image/png",
             "purpose": "any maskable"
         }
