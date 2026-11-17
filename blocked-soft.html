@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#1B8A4A">
+    <title>АрбитрПро — Запрос документов</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-page">
+    <header class="top-bar">
+        <div class="user-info">
+            <div class="user-avatar">ИИ</div>
+            <div class="user-name">Иванов Иван Иванович</div>
+        </div>
+    </header>
+
+    <!-- Баннер запроса -->
+    <div class="soft-alert">
+        <div class="soft-alert-icon">⚠</div>
+        <div class="soft-alert-body">
+            <div class="soft-alert-title">Необходимо уточнить данные</div>
+            <div class="soft-alert-text">
+                Загрузите справку 2-НДФЛ за 2025 год для продолжения отслеживания статуса ПМ.
+            </div>
+            <button class="btn-alert" id="uploadDocBtn">Загрузить документ</button>
+        </div>
+    </div>
+
+    <main class="content">
+        <section class="card finance-card">
+            <div class="card-label">Доступно для снятия в этом месяце</div>
+            <div class="finance-amount">50 000 ₽</div>
+            <button class="btn-secondary">
+                <span class="btn-icon">+</span>
+                Сообщить о доп./раннем пополнении
+            </button>
+        </section>
+
+        <section class="card">
+            <h2 class="card-title">Статус выплаты ПМ</h2>
+            <div class="stepper">
+                <div class="step active"><div class="step-dot">1</div><div class="step-label">Поход в банк</div><div class="step-date">18.11.2026</div></div>
+                <div class="step-line"></div>
+                <div class="step"><div class="step-dot">2</div><div class="step-label">Ожидание денег</div><div class="step-date">—</div></div>
+                <div class="step-line"></div>
+                <div class="step"><div class="step-dot">3</div><div class="step-label">Выплата ПМ</div><div class="step-date">—</div></div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 class="card-title">Статус дела</h2>
+            <div class="timeline">
+                <div class="timeline-item done"><div class="timeline-dot">✓</div><div class="timeline-text">Запущено в работу</div></div>
+                <div class="timeline-item done"><div class="timeline-dot">✓</div><div class="timeline-text">Суд принял заявление</div></div>
+                <div class="timeline-item active"><div class="timeline-dot">●</div><div class="timeline-text">Отправлена кандидатура АУ</div></div>
+                <div class="timeline-item"><div class="timeline-dot">○</div><div class="timeline-text">Назначено судебное заседание</div></div>
+                <div class="timeline-item"><div class="timeline-dot">○</div><div class="timeline-text">Введена процедура (РД или РИ)</div></div>
+                <div class="timeline-item"><div class="timeline-dot">○</div><div class="timeline-text">Назначены торги</div></div>
+                <div class="timeline-item"><div class="timeline-dot">○</div><div class="timeline-text">Дело завершено</div></div>
+            </div>
+        </section>
+    </main>
+
+    <button class="fab-contact" id="contactBtn">
+        <span class="fab-icon">💬</span>
+        <span class="fab-text">Связаться</span>
+    </button>
+
+    <script src="app.js"></script>
+</body>
+</html>
