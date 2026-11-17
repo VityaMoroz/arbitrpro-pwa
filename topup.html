@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#1B8A4A">
+    <title>АрбитрПро — Дополнительное пополнение</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="form-page">
+    <header class="top-bar">
+        <button class="btn-back" id="backBtn">← Назад</button>
+        <div class="top-bar-title">Доп. пополнение</div>
+        <div style="width:40px;"></div>
+    </header>
+
+    <main class="content">
+        <form id="topupForm" class="form-card" novalidate>
+            <h2 class="form-title">Сообщить о дополнительном или раннем пополнении</h2>
+            <p class="form-subtitle">Заполните данные — мы учтём их при расчёте ПМ.</p>
+
+            <div class="form-group">
+                <label for="amount">Сумма пополнения, ₽</label>
+                <input type="tel" id="amount" inputmode="numeric" placeholder="30 000">
+            </div>
+
+            <div class="form-group">
+                <label for="date">Дата поступления</label>
+                <input type="date" id="date">
+            </div>
+
+            <div class="form-group">
+                <label for="source">Источник (от кого / за что)</label>
+                <input type="text" id="source" placeholder="ООО «Ромашка», зарплата">
+            </div>
+
+            <div class="form-group">
+                <label for="account">Реквизиты счёта поступления</label>
+                <input type="text" id="account" placeholder="Сбербанк, **** 1234">
+            </div>
+
+            <div class="form-group">
+                <label for="comment">Комментарий</label>
+                <textarea id="comment" rows="3" placeholder="Дополнительная информация"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Прикрепить фото / скриншот</label>
+                <div class="file-upload">
+                    <input type="file" id="fileInput" accept="image/*" capture="environment" style="display:none;">
+                    <button type="button" class="btn-file" id="fileBtn">📷 Сделать фото или выбрать из галереи</button>
+                    <div class="file-preview" id="filePreview"></div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-primary">Отправить</button>
+        </form>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
